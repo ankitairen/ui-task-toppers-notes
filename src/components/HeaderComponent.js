@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const HeaderContainerDiv = styled.div`
   overflow: hidden;
-  background-color: #4176d9;
+  background-color: #4176D9;
   width: 100%;
 `;
 
@@ -38,7 +38,7 @@ function HeaderComponent({ logo }) {
 }
 
 HeaderComponent.propTypes = {
-  logo: PropTypes.string
+  logo: PropTypes.string,
 };
 
 export default HeaderComponent;

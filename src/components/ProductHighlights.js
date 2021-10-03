@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const ProductHighlightsMainDiv = styled.div`
   display: flex;
@@ -21,24 +21,29 @@ const ContentContainer = styled.ol`
 `;
 
 const ListItem = styled.li`
-  margin: 0px 0px 15px;
+  margin: 0px 0px 15px
 `;
 
-function ProductHighlights({ translation }) {
+function ProductHighlights( { translation }) {
+  
   return (
     <ProductHighlightsMainDiv>
-      <TextContent>{translation.productsAdvantagesHeading}</TextContent>
-      <ContentContainer>
-        {translation.productsAdvantagesList.map((value, index) => {
-          return <ListItem key={index}>{value}</ListItem>;
-        })}
-      </ContentContainer>
+        <TextContent>{translation.productsAdvantagesHeading}</TextContent>
+        <ContentContainer>
+            {
+                translation.productsAdvantagesList.map((value, index) => {
+                    return (
+                        <ListItem key={index}>{value}</ListItem>
+                    )
+                })
+            }
+        </ContentContainer>
     </ProductHighlightsMainDiv>
   );
 }
 
 ProductHighlights.propTypes = {
-  translation: PropTypes.object
+  translation: PropTypes.object,
 };
 
 export default ProductHighlights;

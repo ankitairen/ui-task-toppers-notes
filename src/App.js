@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
-import styled from "styled-components";
-import ProductContainer from "./containers/ProductContainer";
+import React from 'react';
+import './App.css';
+import styled from 'styled-components';
+import ProductContainer from './containers/ProductContainer';
 
 const AppContainer = styled.div`
   display: flex;

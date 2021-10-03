@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { device } from "../utils/mediaUtil";
+import React from 'react';
+import styled from 'styled-components';
+import { device } from '../utils/mediaUtil';
 
 const BreadCrumbMainDiv = styled.div`
   color: #808080;
@@ -17,19 +17,26 @@ const BreadCrumbContent = styled.span`
   margin-right: 1%;
 `;
 
-const breadCrumbNav = ["Home", "IAS Study Material", "IAS Toppers Samanya..."];
+const breadCrumbNav = [
+    'Home',
+    'IAS Study Material',
+    'IAS Toppers Samanya...'
+];
 
 function BreadCrumb() {
+  
   return (
     <BreadCrumbMainDiv>
-      {breadCrumbNav.map((value, index) => {
-        return (
-          <>
-            <BreadCrumbContent key={index}>{value}</BreadCrumbContent>
-            {index === breadCrumbNav.length - 1 ? "" : "  >  "}
-          </>
-        );
-      })}
+        {
+           breadCrumbNav.map((value, index) => {
+               return (
+                   <>
+                    <BreadCrumbContent key={index}>{value}</BreadCrumbContent>
+                    {index === breadCrumbNav.length - 1 ? '' : '  >  '}
+                   </>
+               )
+           }) 
+        }
     </BreadCrumbMainDiv>
   );
 }
